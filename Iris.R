@@ -67,4 +67,30 @@ summary(name_rule)
 inspect(sort(name_rule, by="confidence"))
 inspect(sort(name_rule, by="lift"))
 inspect(sort(name_rule, by="support"))
-        
+
+# Add library moments for skewness and kurtosis calculations
+library(moments)
+
+# Calculate mean for each numeric column in the iris dataset
+mean_sepal_length <- mean(iris$sepal.length)
+mean_sepal_width <- mean(iris$sepal.width)
+mean_petal_length <- mean(iris$petal.length)
+mean_petal_width <- mean(iris$petal.width)
+
+# Calculate variance for each numeric column in the iris dataset
+var_sepal_length <- var(iris$sepal.length)
+var_sepal_width <- var(iris$sepal.width)
+var_petal_length <- var(iris$petal.length)
+var_petal_width <- var(iris$petal.width)
+
+# Calculate skewness for each numeric column in the iris dataset
+skewness_sepal_length <- skewness(iris$sepal.length)
+skewness_sepal_width <- skewness(iris$sepal.width)
+skewness_petal_length <- skewness(iris$petal.length)
+skewness_petal_width <- skewness(iris$petal.width)
+
+# Calculate kurtosis for each numeric column in the iris dataset
+kurtosis_sepal_length <- kurtosis(iris$sepal.length)
+kurtosis_sepal_width <- kurtosis(iris$sepal.width)
+kurtosis_petal_length <- kurtosis(iris$petal.length)
+kurtosis_petal_width <- kurtosis(iris$petal.width)
